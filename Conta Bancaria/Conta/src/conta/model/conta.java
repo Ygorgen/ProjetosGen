@@ -1,12 +1,12 @@
 package conta.model;
 
 
-public abstract class conta {
+public class conta {
 	private int numero;
 	private int agencia;
 	private int tipo;
 	private String titular;
-	private float saldo;
+	private float saldo,transferir;
 
 	public conta(int numero, int agencia, int tipo, String titular, float saldo) {
 		this.numero = numero;
@@ -80,7 +80,7 @@ public abstract class conta {
 			tipo = "conta poupança";
 			break;
 		}
-		System.out.println("\n\n***********************************************************");
+		System.out.println("\n\n*******************************************************");
 		System.out.println("Dados da Conta:");
 		System.out.println("***********************************************************");
 		System.out.println("Numero da Conta: " + this.numero);
@@ -89,6 +89,14 @@ public abstract class conta {
 		System.out.println("Titular: " + this.titular);
 		System.out.println("Saldo: " + this.saldo);
 
+	}
+
+	public float getTransferir() {
+		return transferir;
+	}
+
+	public void setTransferir(float transferir) {
+		this.transferir = transferir;
 	}
 
 }
